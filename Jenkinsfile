@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('pull code') {
             steps {
-                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '29529f33-aadc-4d4a-9aa5-5a60e87a60e4', url: 'https://github.com/Iamyunzhongzi/springboot-empty.git']])
+                checkout scmGit(branches: [[name: '*/${branch}']], extensions: [], userRemoteConfigs: [[credentialsId: '29529f33-aadc-4d4a-9aa5-5a60e87a60e4', url: 'https://github.com/Iamyunzhongzi/springboot-empty.git']])
             }
         }
 
